@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>走秀</title>
+		<link rel="stylesheet" type="text/css" href="css/styleNew.css"/>
+		<script src="js/indexNew.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/banner.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			div.elevator{
+				display: none;
+				position: fixed;
+				width: 120px;
+				height:370px;
+				top: 30%;
+				right: -60px;
+				border: 1px solid #000000;
+				z-index: 999;
+				background-color: #FFFFFF;
+			}
+			div.elevator .title{
+				font-size: 22px;
+				font-family: "微软雅黑";
+				text-align: center;
+				padding: 0 10px;
+				color: #343537;
+				border-bottom: 1px solid #000;
+			}
+			div.elevator .title span{
+				display: block;
+				width: 100%;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				font-size: 28px;
+				font-family: "黑体";
+				font-weight: bold;
+			}
+			div.elevator ul{
+				padding: 0 20px;
+			}
+			div.elevator li{
+				width: 100%;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				color: #373838;
+				cursor: pointer;
+				border-bottom: 1px solid #D3D8DE;
+			}
+			div.elevator .toTop{
+				width: 100%;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				cursor: pointer;
+			}
+			ul.search{
+				position: absolute;
+				width: 265px;
+				background: #f00;
+				top: 28px;
+				right: 73px;
+				list-style: none;
+				background-color: #FFFFFF;
+				border: 1px solid #787878;
+				z-index: 9999;
+			}
+			ul.search>li{
+				float: none;
+				line-height: 25px;
+				font-size: 14px;
+				padding: 0 10px;
+				border: 1px soli red;
+				text-align: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="cod">
+			<img src="img/detail/e_code.png"/>
+		</div>
+		<div class="modal">
+			<div class="modalBox">
+				<img src="img/detail/e_code.png"/>
+			</div>
+		</div>
+		<div  class="elevator">
+			<div class="title">
+				秋初衣橱必备单品
+				<span>衬衫节</span>
+			</div>
+			<ul>
+				<li>最新</li>
+				<li>尖获推荐</li>
+				<li>热荐专题</li>
+				<li>更多专题</li>
+				<li>发现好货</li>
+			</ul>
+			<div class="toTop">
+				回顶部
+				<img style="vertical-align: middle;" src="img/indexNew/顶部.png"/>
+			</div>
+		</div>
+		<header>
+			<div class="container">
+				<ul class="left">
+					<li>
+						<a href="login-register.html">登录/注册</a>
+					</li>
+					<li>
+						<img src="img/index/购物袋 (1).png"/>
+						<a class="a" href="car.html">购物车<span>0</span>件</a>
+						<div class="s-bag">
+							您的购物车里暂没有任何东西
+						</div>
+					</li>
+					<li>
+						我的走秀<img id="tria" src="img/index/向下边框三角.png" alt="" />
+						<ul id="myshow">
+							<li class="sh">我的订单</li>
+							<li class="sh">自动退货</li>
+							<li class="sh">我的收藏</li>
+							<li class="sh">帮助中心</li>
+							<li class="sh">全部吐槽</li>
+						</ul>
+					</li>
+					<div style="clear: both;">
+						
+					</div>
+				</ul>
+				<div class="show-center">
+					<img style="margin-top: -5px;" src="img/index/logo.png"/>
+					<ul class="nav">
+						<li><a href="indexNew.html">首页</a></li>
+						<li><a href="#">新品</a></li>
+						<li><a href="#">男士</a></li>
+						<li><a href="#">女士</a></li>
+						<li><a href="#">品牌</a></li>
+						<li><a href="#">发现</a></li>
+						<li><a href="#">专题</a></li>
+						<li><a href="#">手机走秀</a></li>
+					</ul>
+				</div>
+				<input type="text" id="search" value="" placeholder="请搜索Alexander McQueen试试" />
+				<ul class="search"></ul>
+				<img class="search" src="img/index/搜索.png"/>
+			</div>
+		</header>
+		<div class="types">
+			<div class="container" id="types">
+				<span class="type" style="border-bottom-color: #fdfdfd;">
+					包袋
+				</span>
+				<span class="type">
+					服装
+				</span>
+				<span class="type">鞋靴</span>
+				<span class="type">腕表</span>
+				<span class="type">配饰</span>
+				<span class="type">妆品</span>
+				<span class="type">生活</span>
+				<span class="type">婴童</span>
+				<span class="type">豪车</span>
+			</div>
+		</div>
+		<div class="banners">
+			<div class="container">
+				<div class="banner">
+					<img src="img/login/banner1a.jpg"/>
+				</div>
+				<div class="banner">
+					<img src="img/login/banner2.jpg"/>
+				</div>
+				<div class="banner">
+					<img src="img/login/banner3.jpg"/>
+				</div>
+				<div class="banner">
+					<img src="img/login/banner4.jpg"/>
+				</div>
+				<div class="banner">
+					<img src="img/login/banner5.jpg"/>
+				</div>
+				
+			</div>
+			
+		</div>
+		<div class="favorable">
+			<ul>
+				<li>
+					<i class="ico1"></i>
+				</li>
+				<li>
+					<i class="ico2"></i>
+				</li>
+				<li>
+					<i class="ico4"></i>
+				</li>
+				<li>
+					<i class="ico5"></i>
+				</li>
+			</ul>
+		</div>
+		<div class="good-content">
+			<img src="img/login/autumn.jpg"/>
+			<div class="floor" id="1">
+				<h3>
+					<img src="img/indexNew/topic_za.jpg"/>
+				</h3>
+				<ul class="zuixin">
+					<li>
+						<a href="detail.html"><img class="scale" src="img/indexNew/zuixin_01.jpg"/></a>
+						<img class="center" src="img/indexNew/zuixin_01.png"/>
+					</li>
+					<li>
+						<img class="scale" src="img/indexNew/zuixin_02.jpg"/>
+						<img class="center" src="img/indexNew/zuixin_02.png"/>
+					</li>
+					<div style="clear: both;"></div>
+				</ul>
+			</div>
+			<div class="floor">
+				<h3>
+					<img src="img/indexNew/goods_t.jpg"/>
+				</h3>
+				<ul class="jianhuo">
+					<li>
+						<img src="img/indexNew/1.jpg"/>
+						<div class="zhezhao"></div>
+					</li>
+					<li>
+						<img src="img/indexNew/10.jpg"/>
+						<div class="zhezhao"></div>
+					</li>
+					<li>
+						<img src="img/indexNew/11.jpg"/>
+						<div class="zhezhao"></div>
+					</li>
+					<li>
+						<img src="img/indexNew/12.jpg"/>
+						<div class="zhezhao"></div>
+					</li>
+					<li>
+						<img src="img/indexNew/13.jpg"/>
+						<div class="zhezhao"></div>
+					</li>
+					<li>
+						<img src="img/indexNew/14.jpg"/>
+						<div class="zhezhao"></div>
+					</li>
+					<li>
+						<img src="img/indexNew/15.jpg"/>
+						<div class="zhezhao"></div>
+					</li>
+					<li>
+						<img src="img/indexNew/16.jpg"/>
+						<div class="zhezhao"></div>
+					</li>
+					<li>
+						<img src="img/indexNew/17.jpg"/>
+						<div class="zhezhao"></div>
+					</li>
+					<li>
+						<img src="img/indexNew/18.jpg"/>
+						<div class="zhezhao"></div>
+					</li>
+					<li>
+						<img src="img/indexNew/2.jpg"/>
+						<div class="zhezhao"></div>
+					</li>
+					<li>
+						<img src="img/indexNew/3a.jpg"/>
+						<div class="zhezhao"></div>
+					</li>
+					<div style="clear: both;"></div>
+				</ul>
+			</div>
+			<div class="floor">
+				<h3>
+					<img src="img/indexNew/topic_t.jpg"/>
+				</h3>
+				<ul class="zuixin">
+					<li>
+						<img class="scale" src="img/indexNew/beats_01.jpg"/>
+						<img class="center" src="img/indexNew/beats_01g.png"/>
+					</li>
+					<li>
+						<img class="scale" src="img/indexNew/beats_02.jpg"/>
+						<img class="center" src="img/indexNew/beats_02g.png"/>
+					</li>
+					<li>
+						<img class="scale" src="img/indexNew/beats_03.jpg"/>
+						<img class="center" src="img/indexNew/beats_03.png"/>
+					</li>
+					<li>
+						<img class="scale" src="img/indexNew/beats_05(1).jpg"/>
+						<img class="center" src="img/indexNew/beats_05(2).png"/>
+					</li>
+					<li>
+						<img class="scale" src="img/indexNew/beats_05.jpg"/>
+						<img class="center" src="img/indexNew/beats_05.png"/>
+					</li>
+					<li>
+						<img class="scale" src="img/indexNew/beats_06.jpg"/>
+						<img class="center" src="img/indexNew/beats_06.png"/>
+					</li>
+					<div style="clear: both;"></div>
+				</ul>
+			</div>
+			<div class="floor">
+				<h3>
+					<img src="img/indexNew/topic_m.jpg"/>
+				</h3>
+				<div class="car">
+					<img class="zhe" src="img/login/autoa.jpg"/>
+					<div class="zhezhao"></div>
+				</div>
+			</div>
+			<div class="floor">
+				<h3>
+					<img src="img/indexNew/found_t.jpg"/>
+				</h3>
+				<ul class="find-goods">
+					<li><a href="javascript:void(0)"><img src="img/indexNew/h1.jpg" alt="" /></a></li>
+					<li><a href="javascript:void(0)"><img src="img/indexNew/h2.jpg" alt="" /></a></li>
+					<li><a href="javascript:void(0)"><img src="img/indexNew/h3.jpg" alt="" /></a></li>
+					<li><a href="javascript:void(0)"><img src="img/indexNew/h4.jpg" alt="" /></a></li>
+					<li><a href="javascript:void(0)"><img src="img/indexNew/h5.jpg" alt="" /></a></li>
+					<li><a href="javascript:void(0)"><img src="img/indexNew/h6.jpg" alt="" /></a></li>
+					<li><a href="javascript:void(0)"><img src="img/indexNew/h7.jpg" alt="" /></a></li>
+					<li><a href="javascript:void(0)"><img src="img/indexNew/h8.jpg" alt="" /></a></li>
+					<li><a href="javascript:void(0)"><img src="img/indexNew/h9.jpg" alt="" /></a></li>
+					<li><a href="javascript:void(0)"><img src="img/indexNew/h10.jpg" alt="" /></a></li>
+					<li><a href="javascript:void(0)"><img src="img/indexNew/h11.jpg" alt="" /></a></li>
+					<li><a href="javascript:void(0)"><img src="img/indexNew/h12.jpg" alt="" /></a></li>
+					<li><a href="javascript:void(0)"><img src="img/indexNew/h13.jpg" alt="" /></a></li>
+					<li><a href="javascript:void(0)"><img src="img/indexNew/h14.jpg" alt="" /></a></li>
+					<li><a href="javascript:void(0)"><img src="img/indexNew/h15.jpg" alt="" /></a></li>
+					<li><a href="javascript:void(0)"><img src="img/indexNew/h16.jpg" alt="" /></a></li>
+					<div style="clear: both;"></div>
+				</ul>
+			</div>
+			<h3>
+				<img src="img/indexNew/fonud_m.jpg"/>
+			</h3>
+		</div>
+		
+		<footer>
+			<div class="up">
+			<div class="container">
+				<div class="one">
+					<a class="ico1" href="javascript:void(0)"></a>
+					<a class="ico2" href="javascript:void(0)"></a>
+					<a class="ico3" href="javascript:void(0)"></a>
+				</div>
+				<ul class="two">
+					<li><a href="javascript:void(0)">招贤纳士</a></li>
+					<li><a href="javascript:void(0)">CEO邮箱</a></li>
+					<li><a href="javascript:void(0)">售后服务</a></li>
+					<li><a href="javascript:void(0)">常见问题</a></li>
+					<li><a href="javascript:void(0)">关税说明</a></li>
+					<li><a href="javascript:void(0)">物流配送</a></li>
+				</ul>
+				<div class="three">	
+					<hr />
+					<div class="about_us">
+						<span>关于我们</span>
+					</div>
+					<ul class="shejiao">
+						<li>
+							<a class="ico1" href="javascript:void(0)">
+								<i class="ico5"></i>
+							</a>
+						</li>
+						<li>
+							<a class="ico2" href="javascript:void(0)"></a>
+						</li>
+						<li>
+							<a class="ico3" href="javascript:void(0)"></a>
+						</li>
+						<li>
+							<a class="ico4" href="javascript:void(0)"></a>
+						</li>
+					</ul>
+					<input type="text" placeholder="订阅最新时尚资讯邮件"/>
+					
+				</div>
+				<div class="our_app">
+					<div class="title">我们的APP</div>
+					<div class="erwei"></div>
+				</div>
+			</div>
+			</div>
+			<div class="down">
+				<ul class="nav">
+					<li><a href="javascript:void(0)">关于走秀</a>|</li>
+					<li><a href="javascript:void(0)">About us</a>|</li>
+					<li><a href="javascript:void(0)">媒体报道</a>|</li>
+					<li><a href="javascript:void(0)">品牌招商</a>|</li>
+					<li><a href="javascript:void(0)">加入走秀</a>|</li>
+					<li><a href="javascript:void(0)">网站地图</a>|</li>
+					<li><a href="javascript:void(0)">联系我们</a>|</li>
+					<li><a href="javascript:void(0)">品牌大全</a>|</li>
+					<li><a href="javascript:void(0)">邮件订阅</a>|</li>
+					<li><a href="javascript:void(0)">WAP站点</a></li>
+				</ul>
+				<ul class="alter_sale">
+					<li><a href="javascript:void(0)"></a></li>
+					<li><a href="javascript:void(0)"></a></li>
+					<li><a href="javascript:void(0)"></a></li>
+				</ul>
+				<p>
+					Copyright&copy;2008-2017
+					<a href="javascript:void(0)">Xiu.com</a>
+					深圳走秀网络科技有限公司 版权所有 .
+					<a href="javascript:void(0)">粤ICP备07502993号</a>
+					<a href="javascript:void(0)">
+						<img src="img/login/wab.png"/>
+					 	粤公网安备 44030402000804号
+					</a>
+				</p>
+				<div class="last">
+					<a href="javascript:void(0)"><img src="img/index/c_01.jpg"/></a>
+					<a href="javascript:void(0)"><img src="img/index/c_11.jpg"/></a>
+					<a href="javascript:void(0)"><img src="img/index/c_04.jpg"/></a>
+					<a href="javascript:void(0)">
+						<img src="img/index/c_08.jpg"/>
+						<img src="img/index/c_09.jpg"/>
+					</a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

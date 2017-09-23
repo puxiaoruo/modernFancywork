@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var rands = []
+		function randomVer(){
+		//去掉z Z 0 o I
+		var str = "abcdefghijklmnpqrstuvwxyABCDEFGHJKLMNOPQRSTUVWXY123456789";
+//		console.log(str.toLocaleUpperCase());
+		var arr = str.split("");
+//		console.log(arr);
+		for (var i = 0; i < 5; i++) {
+			var randIndex = Math.floor(Math.random()*arr.length);
+			rands.push(arr[randIndex]);
+		}
+		console.log(rands);
+		document.getElementsByTagName("div")[0].innerHTML = rands.join("");
+	}
+	
+	function randColor(){
+		var r = Math.floor(Math.random() * 256);
+		var g = Math.floor(Math.random() * 256);
+		var b = Math.floor(Math.random() * 256);
+		return "color:rgb(" + r + "," + g + "," + b +")";
+	}
+	
+	randomVer()
+	randColor()
+		
+	</script>
+</html>

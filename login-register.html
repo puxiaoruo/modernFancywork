@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录/注册</title>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/login.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<img src="img/login/logo_mini.png"/>
+			</div>
+		</header>
+		<div class="login-reg">
+			<div class="container">
+				<div  class="form">
+					<div class="tabs">
+						<div class="tab">
+							<a href="#">短信登录</a>
+						</div>
+						<div class="tab">
+							<a href="#">密码登录</a>
+						</div>
+						<div style="clear: both;"></div>
+						
+					</div>
+					<div class="t-cont">
+						<form class="info" action="indexNew.html" method="get">
+							<div class="error" id="tel-error">
+								<i class="ico1"></i>
+								<span>
+									请输入有效的手机号!
+								</span>
+							</div>
+							<div class="inp">
+								<input type="text" name="telNum" id="telNum" value="" />
+								<div class="show" id="tel-show">手机号码</div>
+							</div>
+							<!--协议-->
+							<p class="new-user" id="tel-newu">
+								新手机号将认为接受
+								<a style="margin: 0 -8px;" href="#">《走秀网用户协议》</a>
+								并自动注册协议
+							</p>
+							<!--verific-->
+							<!--验证码-->
+							<div class="inp" id="verific">
+								<input style="width: 127px" type="text" name="verif" id="verif" value="" />
+								<i class="ico2"></i>
+								<div class="show" id="verif-code">验证码</div>
+								<a id="ver-pic" style="display: inline-block; width: 80px; height: 35px;line-height: 35px;text-align: center; background: url("img/login/kaptcha1.jpg") no-repeat center;" href="#"></a>
+								<a class="a" href="#" style="color: #005BA1; font-size: 13px;">换一换</a>
+							</div>
+							<div class="inp" style="display: none;">
+								<i class="ico1"></i>
+								<span>
+									请输入您收到的验证码!
+								</span>
+							</div>
+							<div class="inp">
+								<input style="width: 187px" type="text" name="auth-code" id="auth-code" value="" />
+								<!--还有一个倒计时-->
+								<input class="button" type="button" name="ver_tel" id="ver_tel" value="获取验证码" />
+								<!--<buttver_tel"></button>-->   
+								<div class="show" id="auth-show">短信验证码</div>
+							</div>
+							<div class="find-psd">
+								<a href="#">找回密码</a>
+							</div>
+							
+							<input class="sub" type="submit" name="sub_tel" id="sub_tel1" value="登&nbsp;&nbsp;&nbsp;录" />
+						</form>
+						<div class="parter">
+							<hr/>
+							<div class="part-text">
+								合作网站账号登录
+							</div>
+							<ul class="part-sites">
+								<li>
+									<a href="#"><i class="ico3"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="ico4"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="ico5"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="ico6"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="ico7"></i></a>
+								</li>
+							</ul>
+							
+						</div>
+						<!--<div class="login-type">
+							<a href="#">
+								<i class="ico8"></i>
+							</a>
+							<a style="margin-left: -20px;" href="#">
+								<i class="ico9"></i>
+							</a>
+						</div>-->
+					
+					</div>
+					<div class="t-cont">
+						<div class="info">
+							<!--<div class="inp">
+								<i class="ico1"></i>
+								<span>
+									密码和用户名不匹配，请您核对后再次输入！<br/>&nbsp;&nbsp;请输入验证码！
+								</span>
+							</div>-->
+							<div class="inp">
+								<input type="text" name="user" id="user" value="" />
+								<div class="show">手机号/邮箱/用户名</div>
+							</div>
+							<div class="inp">
+								<input type="psd" name="psd" id="psd" value="" />
+								<div class="show">密码</div>
+							</div>
+							<!--<div class="inp">
+								<input style="width: 127px" type="text" name="telNum" id="telNum" value="" />
+								<i class="ico2"></i>
+								<div class="show">验证码</div>
+								<a href="#"><img style="width: 80px; height: 35px; vertical-align: middle;" src="img/login/kaptcha.jpg"/></a>
+								<a class="a" href="#" style="color: #005BA1; font-size: 13px;">换一换</a>
+							</div>-->
+							<div class="find-psd">
+								<a href="#">找回密码&nbsp;|</a>
+								<a href="#">注册账号</a>
+							</div>
+							<input class="sub" type="submit" name="sub_tel" id="sub_tel2" value="登&nbsp;&nbsp;&nbsp;录" />
+						</div>
+						<div class="parter">
+							<hr/>
+							<div class="part-text">
+								合作网站账号登录
+							</div>
+							<ul class="part-sites">
+								<li>
+									<a href="#"><i class="ico3"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="ico4"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="ico5"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="ico6"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="ico7"></i></a>
+								</li>
+							</ul>
+						</div>
+						<!--<div class="login-type">
+							<a href="#">
+								<i class="ico8"></i>
+							</a>
+							<a style="margin-left: -20px;" href="#">
+								<i class="ico9"></i>
+							</a>
+						</div>-->
+						
+					</div>
+					<div class="login-type">
+						<a href="#">
+							<i class="ico8"></i>
+						</a>
+						<a style="margin-left: -20px;" href="#">
+							<i class="ico9"></i>
+						</a>
+					</div>
+				</div>
+				
+				<div class="form">
+					<div class="scan-login">
+						手机扫码登录
+					</div>
+					<div class="scan">
+						<div class="two-code">
+							<img src="img/login/code.png"/>
+						</div>
+						<div class="open-app">
+							打开<a href="#">走秀app</a>，扫一扫登录
+						</div>
+					</div>
+					<div class="login-type">
+						<a href="#">
+							<i class="ico10"></i>
+						</a>
+						<a style="margin-left: -20px;" href="#">
+							<i class="ico11"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<footer>
+			<div class="container">
+			<div class="down">
+				<ul class="nav">
+					<li><a href="javascript:void(0)">关于走秀</a>|</li>
+					<li><a href="javascript:void(0)">About us</a>|</li>
+					<li><a href="javascript:void(0)">媒体报道</a>|</li>
+					<li><a href="javascript:void(0)">品牌招商</a>|</li>
+					<li><a href="javascript:void(0)">加入走秀</a>|</li>
+					<li><a href="javascript:void(0)">网站地图</a>|</li>
+					<li><a href="javascript:void(0)">联系我们</a>|</li>
+					<li><a href="javascript:void(0)">品牌大全</a>|</li>
+					<li><a href="javascript:void(0)">邮件订阅</a>|</li>
+					<li><a href="javascript:void(0)">WAP站点</a></li>
+				</ul>
+				
+				<p>
+					Copyright&copy;2008-2017
+					<a href="javascript:void(0)">Xiu.com</a>
+					深圳走秀网络科技有限公司 版权所有 .
+					<a href="javascript:void(0)">粤ICP备07502993号</a>
+					<a href="javascript:void(0)">
+						<img src="img/login/wab.png"/>
+					 	粤公网安备 44030402000804号
+					</a>
+				</p>
+				
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

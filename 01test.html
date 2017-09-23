@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<input type="checkbox" name="della" class="del" id="del1" value="all"/> 
+		<input type="checkbox" name="della" value=""/>
+		<input type="checkbox" name="della" value=""/>
+		<input type="checkbox" name="della" value=""/>
+		<input type="checkbox" name="della" class="del" id="del2" value="all"/> 
+
+	</body>
+	<script type="text/javascript">
+		//   jq
+		$(function() {
+          	$("#del1").click(function() {
+          		console.log(this.checked);
+          		var $ind = $(this).index();
+//        		$(".del").not($(this).index()).attr("checked",this.checked);
+          		/*$(".del").each(function(i,v){
+          			$(".del").not($ind).attr("checked",this.checked);
+          		})*/
+          		$("[type=checkbox]").attr("checked",this.checked);
+//              $('input[name="della"]').attr("checked",this.checked);
+            });
+            $("#del2").click(function(){
+            	$("[type=checkbox]").attr("checked",this.checked);
+            })
+            var $subBox = $("input[name='della']");
+            $subBox.click(function(){
+                $("#del").attr("checked",$subBox.length == $("input[name='della']:checked").length ? true : false);
+            });
+        });
+	</script>
+</html>

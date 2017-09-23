@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+    <style>
+        .container{
+            width:800px;
+            border:1px solid #333;
+            padding:10px;
+            margin:auto;
+        }
+        .container img{
+            width:397px;
+            height:288px;
+        }
+    </style>
+</head>
+<body>
+    <h1>图片的延迟加载</h1>
+    <hr>
+    <div>
+        <img src="img/更新版index/1.jpg" pic="img/更新版index/loading3a.jpg">
+        <img src="img/更新版index/1.jpg" pic="img/更新版index/loading3a.jpg">
+        <img src="img/更新版index/1.jpg" pic="img/更新版index/loading3a.jpg">
+        <img src="img/更新版index/1.jpg" pic="img/更新版index/loading3a.jpg">
+        <img src="img/更新版index/1.jpg" pic="img/更新版index/loading3a.jpg">
+        <img src="img/更新版index/1.jpg" pic="img/更新版index/loading3a.jpg">
+        <img src="img/更新版index/1.jpg" pic="img/更新版index/loading3a.jpg">
+        <img src="img/更新版index/1.jpg" pic="img/更新版index/loading3a.jpg">
+        <img src="img/更新版index/1.jpg" pic="img/更新版index/loading3a.jpg">
+        <img src="img/更新版index/1.jpg" pic="img/更新版index/loading3a.jpg">
+        <img src="img/更新版index/1.jpg" pic="img/更新版index/loading3a.jpg">
+        <img src="img/更新版index/1.jpg" pic="img/更新版index/loading3a.jpg">
+        
+    </div>
+
+<script>
+
+    //获取所有的图片
+//  var imglist = document.images;
+    var imglist = document.getElementsByTagName("img");
+//  console.log(imglist.length + "imglist");  //12
+    
+    //获取视口的高度
+    var screen_width = window.innerHeight || document.documentElement.clientHeight;  
+//    console.log(screen_width);
+    console.log(imglist[0])
+    //获取第一张图片距离顶部的高度
+    var first_Height = imglist[0].offsetTop;
+      console.log(first_Height);  //106
+    var everyHeight = imglist[0].offsetHeight;
+      console.log(everyHeight);  // 0
+    
+    //得到初始显示的图片数量
+    var index = Math.ceil((screen_width - first_Height) / everyHeight) * 2;
+      console.log(index);
+    
+    //将初始图片进行展示
+   /* for(var i = 0; i<index; i++){
+//  	console.log(imglist[i].offsetHeight + imglist[i].offsetWidth);
+    	var str = imglist[i].getAttribute('pic');
+    	imglist[i].setAttribute('src',str);
+    }*/
+
+    //给window绑定滚动事件
+    window.onscroll = function(){
+    
+    //获取滚动距离
+    var scroll_height = document.body.scrollTop || document.documentElement.scrollTop;
+    //console.log(scroll_height);
+    for(var j = index; j<imglist.length; j++){
+        (function(n){
+            if(scroll_height + screen_width > imglist[n].offsetTop){
+                    setTimeout(function(){
+                        imglist[n].setAttribute('src',imglist[n].getAttribute('pic'))
+                    },300);
+            index++; //如果已经判断成功显示的图片 就不在判断了
+        }
+    })(j);
+    /*
+    定时器延迟  j已经不是以前的j了。
+    要求将j变成局部变量
+    if(scroll_height + screen_width > imglist[j].offsetTop){
+        setTimeout(function(){
+            imglist[j].setAttribute('src',imglist[j].getAttribute('pic'))
+        },300);
+    }*/
+    }
+    }
+</script>
+</body>
+</html>

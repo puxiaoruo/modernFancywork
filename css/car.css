@@ -1,0 +1,226 @@
+.container{
+	width: 1000px;
+}
+.con{
+	margin-top: 10px;
+	border-bottom: 1px solid #000000;
+	overflow: hidden;
+}
+table{
+	font-size: 13px;
+}
+.img{
+	margin-top: 8px;
+	vertical-align: middle;
+}
+.pull-right b{
+	font-size: 22px;
+	color: #F46521;
+}
+.pull-right a{
+	text-decoration: none;
+	color: #5B5B5B;
+}
+.pull-right a:hover{
+	color: red;
+}
+.font{
+	color: #5B5B5B;
+	font-size: 14px;
+}
+.full{
+	display: inline-block;
+	width: 32px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	color: #f00;
+	margin: 5px;
+	border: 1px solid red;	
+}
+.pro_img{
+	float: left;
+	border: 1px solid #DFDFDF;
+}
+.pro_int{
+	float: left;
+	margin-left: 20px;
+}
+.pro_int>p{
+	font-size: 13px;
+}
+.pro_int>p a{
+	color: #000000;
+}
+.pro_int>p a:hover{
+	color: #000000;
+	text-decoration: none;
+}
+.price>span{
+	display: block;
+}
+.price>span:first-child{
+	color: #A6A6A6;
+	text-decoration: line-through;
+}
+td>input{
+	padding: 0;
+	width: 12px;
+	height: 12px;
+	line-height: 12px;
+	text-align: center;
+	background-color: transparent;
+	border-color:#666 ;
+	border: none;
+	border: 1px solid;
+}
+td>input:nth-child(2){
+	width: 32px;
+	height: 17px;
+	margin: 0 10px;
+	border-color: #DFDFDF;
+}
+.handle>span{
+	display: block;
+}
+table tr:first-child{
+	background: #E3E3E3;
+	
+}
+table tr:first-child>th{
+	text-align: center;
+}
+table span{
+	cursor: pointer;
+}
+table{
+	margin-top: 10px;
+	border-collapse:collapse;
+}
+tr{
+	border: 1px solid #D6D3D3;
+}
+.checkboxl{
+	padding-left: 35px;
+	/*padding-top: 50px;*/
+}
+.carbar{
+	width: 960px;
+	height: 60px;
+	line-height: 60px;
+	color: #5B5B5B;
+	margin-top: 8px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	border: 1px solid #D6D3D3;
+}
+.carbar>span{
+	margin-left: 25px;
+}
+.carbar>button{
+	float: right;
+	width: 114px;
+	height: 50px;
+	line-height: 50px;
+	margin: 5px;
+	border: none;
+	color: #FFFFFF;
+	font-size: 20px;
+	font-family: "微软雅黑";
+	background-color: #A0A0A0;
+}
+.carbar .hov{
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 15px;
+	margin: 5px;
+	cursor: pointer;
+}
+.carbar .hov:hover{
+	color: #FFFFFF;
+	background-color: #EA7515;
+}
+.carbar i{
+	font-style: normal;
+}
+.carbar b.col{
+	color: #EA7515;
+}
+.carbar b.big{
+	font-size: 22px;
+}
+.interest{
+	width: 965px;
+	border: 1px solid #D6D3D3;
+}
+.interest h5{
+	width: 963px;
+	height: 25px;
+	/*line-height: 29px;*/
+	padding-left: 20px;
+	margin-left: -15px;
+	overflow: hidden;
+	background: url(../img/car/bfd_cart_title.gif) repeat-x left bottom;
+}
+.inter-list{
+	float: left;
+	width: 188px;
+	padding: 10px;
+	color: #5B5B5B;
+	font-size: 14px;
+}
+.inter-list>img{
+	width: 180px;
+	height: 240px;
+}
+.inter-list .now-rap{
+	margin-top: -10px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	margin-bottom: 5px;
+}
+.inter-list .now-rap>a{
+	color: #5B5B5B;
+}
+.inter-list .now-rap>a:hover{
+	color: red;
+}
+.inter-list p>b{
+	color: #FF6633;
+}
+b.ico1{
+	display: block;
+	width: 171px;
+	height: 27px;
+	margin-top: 20px;
+	background: url(../img/car/s_shop1.gif) no-repeat;
+	background-position: 0 -258px;
+}
+table.collage{
+	display: none;
+	margin-top: 10px;
+}
+.bot{
+	text-align: center; 
+	margin-top: 10px; 
+	padding-top: 10px; 
+	font-size: 14px;
+	color: #5B5B5B;
+	border-top: 1px solid #666;
+}
+.bot>a{
+	color: #5B5B5B;
+}
+.bot>a:hover{
+	text-decoration: none;
+	color: red;
+}
+tr.addcol{
+	height: 85px;
+}
+img.smal{
+	width: 50px;
+	height: 50px;
+}
